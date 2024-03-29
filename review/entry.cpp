@@ -30,7 +30,7 @@ class start_page:private Create_Account,private Login_Account{
 
 int main()
 {
-    
+    start_page a;
     
     return 0;
 }
