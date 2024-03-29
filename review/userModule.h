@@ -1,18 +1,19 @@
 #include<bits/stdc++.h>
 using namespace std;
-
 #ifndef UserModule
 #define UserModule
 struct paymentDetails{
 int  amount;
 long long paymentID;
 };
+
 struct orderDescription{
- int orderId;;
+ int orderId;
  string orderDate;
  int noOfItems;
  string productDescription;
 };
+
 struct designerDescription{
 long long contactDetail;
 string name;
@@ -21,12 +22,12 @@ string rating;
 
 class order:protected User{
 protected:
- 
   orderDescription orderDesc;
    designerDescription desgDesc ;
   paymentDetails  payInfo;
-
+  string deliveryDate;
 };
+
 class User{
     public:
     string name;
@@ -48,7 +49,4 @@ string size;
 string  color;
 }
 ;
-
-
-
 #endif
