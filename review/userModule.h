@@ -43,6 +43,7 @@ class User{
 };
 
 struct prefernce{
+string name;
 string gender;
 int  age;
 string size;
