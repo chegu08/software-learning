@@ -2,10 +2,7 @@
 #include "userModule.h"
 #ifndef START_PAGE
 #define START_PAGE
-vector<User> allUsers;
-inline void insertuser(User& new_user){
-    allUsers.push_back(new_user);
-}
+
 class start_page{
     public:
     int flag;
@@ -24,4 +21,9 @@ class Login_Account{
     private: 
     bool check_details();
 };
+class db{
+    public:
+    vector<User> allUsers;
+    void insertuser(User& new_user);
+}obj;
 #endif
