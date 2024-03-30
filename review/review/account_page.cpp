@@ -38,7 +38,8 @@ void Create_Account::Create_User(){
     cout<<"Enter your gender\n";
     cin>>gender;
     cout<<"Enter your address\n";
-    getline(cin,address);
+    //getline(cin,address);
+    cin>>address;
     cout<<"Enter your contact number\n";
     cin>>phoneNumber;
     cout<<"Enter your age\n";
@@ -55,18 +56,17 @@ void Create_Account::Create_User(){
             cout<<"re-enter your password\n";
         }
     }while(confirmation!=password);
-    id=updateUserID();
 
     cout<<"Enter your preferrences\n";
     string size,color,preferred_gender;
     int preferred_age;
-    cout<<"Enter preferred size\n";
+    cout<<"Enter your size\n";
     cin>>size;
-    cout<<"Enter preferred age\n";
+    cout<<"Enter your  age\n";
     cin>>preferred_age;
-    cout<<"Enter preferred gender\n";
+    cout<<"Enter your  gender\n";
     cin>>preferred_gender;
-    cout<<"Enter preferred color\n";
+    cout<<"Enter the color you like color\n";
     cin>>color;
 
     preference *user_preference= new preference(gender,age,size,color);
