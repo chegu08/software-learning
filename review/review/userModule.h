@@ -2,8 +2,9 @@
 using namespace std;
 #ifndef UserModule
 #define UserModule
-
-
+class start_page;
+class Creste_Account;
+class Login_Account;
 struct preference{
     string gender;
     int  age;
@@ -20,8 +21,8 @@ struct preference{
 class User{
 
     public:
-    int id;
     string name;
+
     protected:
     string mailID;
     string gender;
@@ -31,6 +32,21 @@ class User{
     int age;
     string password;
     preference* Userpreference;
+
+    // public:
+    // User(string Name,string Mail,string Gender,string Address,long long pn,int Age,string pw,preference *pre){
+    //   name=Name;
+    //   mailID=Mail;
+    //   gender=Gender;
+    //   address=Address;
+    //   phoneNumber=pn;
+    //   age=Age;
+    //   password=pw;
+    //   Userpreference=pre;
+
+    // }
+    friend Create_Account;
+
 };
 
 
