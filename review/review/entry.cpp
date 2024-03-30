@@ -1,7 +1,7 @@
 #include "headers.h"
-#include "userModule.h"
 #include<bits/stdc++.h>
 using namespace std;
+int userCount=0,designerCount=0;
 start_page::start_page(){
         cout<<"WELCOME TO CRAFTS'N STITCH\n";
         cout<<"Enter 1 to create a new account\n";
@@ -13,10 +13,10 @@ start_page::start_page(){
                 Create_Account new_account;
                 break;
             }
-            // case 2:{
-            //     Login_Account cur_account;
-            //     break;
-            // }
+            case 2:{
+                Login_Account cur_account;
+                break;
+            }
             default:{
                 cout<<"Enter a correct option\n";
                 break;
