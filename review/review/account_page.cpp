@@ -107,6 +107,10 @@ void Create_Account::Create_designer(){
     }while(confirmation!=new_designer.password);
     new_designer.id=++designerCount;
        designer_obj.allDesigners.push_back(new_designer); 
+   int a;
+    cout<<"to go to login page enter 1\n";
+    cin>>a;
+    if(a==1){ Login_Account cur_user;}
        
 }
 
