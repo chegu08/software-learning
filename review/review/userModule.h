@@ -3,7 +3,7 @@ using namespace std;
 #ifndef UserModule
 #define UserModule
 class start_page;
-class Creste_Account;
+class Create_Account;
 class Login_Account;
 struct preference{
     string gender;
