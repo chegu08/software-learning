@@ -1,10 +1,7 @@
 #include "headers.h"
-#include "userModule.h"
 #include<bits/stdc++.h>
 using namespace std;
-class User;
 class order;
-
  Create_Account::Create_Account(){
         cout<<"Enter 1 to create a user account\n";
         cout<<"Enter 2 to create a designer account\n";
@@ -32,6 +29,7 @@ class order;
         }while(choice>3);
     }
 void Create_Account::Create_User(){
+    //db obj;
     User new_user;
     cout<<"Enter your name\n";
     cin>>new_user.name;
@@ -72,14 +70,14 @@ void Create_Account::Create_User(){
     cin>>color;
 
     new_user.Userpreference= new preference(preferred_gender,preferred_age,size,color);
-    insertuser(new_user);
+    obj.insertuser(new_user);
     cout<<"your details:\n";
-    cout<<allUsers[0].name<<endl;
-    cout<<allUsers[0].mailID<<endl;
-    cout<<allUsers[0].gender<<endl;
-    cout<<allUsers[0].address<<endl;
-    cout<<allUsers[0].phoneNumber<<endl;
-    cout<<allUsers[0].name<<endl;
+    cout<<obj.allUsers[0].name<<endl;
+    cout<<obj.allUsers[0].mailID<<endl;
+    cout<<obj.allUsers[0].gender<<endl;
+    cout<<obj.allUsers[0].address<<endl;
+    cout<<obj.allUsers[0].phoneNumber<<endl;
+    cout<<obj.allUsers[0].name<<endl;
 
 }
 void Create_Account::Create_designer(){
