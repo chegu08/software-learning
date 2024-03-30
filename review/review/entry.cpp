@@ -26,7 +26,7 @@ start_page::start_page(){
         }
 int main()
 {
-    initializeUser(UserCount);
+    
     start_page a;
     return 0;
 
