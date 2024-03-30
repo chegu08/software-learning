@@ -3,7 +3,6 @@ using namespace std;
 #ifndef UserModule
 #define UserModule
 
-extern int UserCount;
 
 struct preference{
     string gender;
@@ -23,23 +22,18 @@ class User{
     public:
     int id;
     string name;
-
     protected:
     string mailID;
     string gender;
     string address;
     //order UserOrder;
-     int phoneNumber;
+    long long  phoneNumber;
     int age;
     string password;
     preference* Userpreference;
 };
 
-inline int updateUserID(){
-    return ++UserCount;
-}
 
-inline void initializeUser(){
-  UserCount=0;
-}
+
+
 #endif
