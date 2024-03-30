@@ -32,7 +32,7 @@ class User{
     int age;
     string password;
     preference* Userpreference;
-
+    int id;
     // public:
     // User(string Name,string Mail,string Gender,string Address,long long pn,int Age,string pw,preference *pre){
     //   name=Name;
@@ -46,6 +46,7 @@ class User{
 
     // }
     friend Create_Account;
+    friend Login_Account;
 
 };
 
