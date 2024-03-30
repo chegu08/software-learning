@@ -25,5 +25,6 @@ class db{
     public:
     vector<User> allUsers;
     void insertuser(User& new_user);
-}obj;
+};
+extern db obj;
 #endif
