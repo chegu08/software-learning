@@ -18,7 +18,8 @@ import Cart from './userpages/userCart';
 import ViewOrder from './userpages/viewOrder';
 import UserOrders from './userpages/userOrders';
 import UserSignupPage from './userpages/userSignupPage';
-export const url="https://da53-14-139-162-2.ngrok-free.app";
+import ViewDesProducts from './desigenerpage/viewDesigenerProducts';
+export const url="https://6b67-14-139-162-2.ngrok-free.app";
 const router=createBrowserRouter([
   {
     path:"/",
@@ -93,8 +94,10 @@ const router=createBrowserRouter([
   {
     path:"/addYourDesigns/:designerID",
     element:<CreateProduct/>,
-  }
-
+  },
+  {
+    path:"/viewDesigen/:productID",
+  element:<ViewDesProducts/>  }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

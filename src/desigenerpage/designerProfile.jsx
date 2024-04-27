@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-import "./designerProfile.css"
+import "./designerProfile.module.css"
 import { useParams } from "react-router-dom";
 import { url } from "..";
 function DesignerProfile() {

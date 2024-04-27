@@ -7,6 +7,7 @@ const {product}=location.state
 
 return(
     <div>
+        <div><img src={product.image} width="350px" height="400px"/></div>
         <div className="product-description">{product.description}</div>
     <div className="product-attribute">Colours: {product.colours}</div>
     <div className="product-attribute">Fabric: {product.fabric}</div>

@@ -45,6 +45,7 @@ export default function Cart() {
         })
         .then((res) => {
             console.log(res.data);
+           
             // Add any further actions after successful purchase
         })
         .catch((err) => {

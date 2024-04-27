@@ -63,8 +63,9 @@ function UserSignupPage(){
             <input placeholder="mailID" type="text" onChange={(event) => { setMailId(event.target.value) }}></input>
             <input type="file" accept="image/*" onChange={uploadImg}></input>
             <button onClick={addEmployee} placeholder="upload here">Add employee</button>
+            <Link to="/UserLoginPage">Click here to Login</Link>
                </div>
-             <Link to="/UserLoginPage">Click here to Login</Link>
+         
             </div>
           );
   

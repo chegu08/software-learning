@@ -55,7 +55,7 @@ button:hover {
 }
 
 .Link {
-  display: block;
+  
   text-align: center;
   margin-top: 20px;
   color: #ff7eb3;
@@ -90,13 +90,6 @@ button:hover {
     opacity: 0.9;
   }
   
-  .Link {
-    display: block;
-    text-align: center;
-    margin-top: 20px;
-    color: #ff7eb3;
-    text-decoration: none;
-  }
   
   .Link:hover {
     text-decoration: underline;
