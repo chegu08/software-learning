@@ -1,0 +1,43 @@
+module.exports=(sequelize,DataTypes)=>{
+    const Product= sequelize.define('designerproduct',{
+        productid:{
+            type:DataTypes.INTEGER
+        },
+        imagepath:{
+            type:DataTypes.STRING,
+            allowNull:false
+        },
+        description:{
+            type:DataTypes.STRING,
+            allowNull:false
+        },
+        designerid:{
+            type:DataTypes.INTEGER
+        },
+        fabric:{
+            type:DataTypes.STRING,
+            allowNull:false
+        },
+        fit:{
+            type:DataTypes.STRING,
+            allowNull:false
+        },
+        colours:{
+            type:DataTypes.STRING,
+            allowNull:false
+        },
+        washing_instructions:{
+            type:DataTypes.STRING,
+            allowNull:false
+        },
+        approx_price:{
+            type:DataTypes.INTEGER,
+            allowNull:true
+        },
+        special_attribute:{
+            type:DataTypes.STRING,
+            allowNull:true
+        }
+    })
+    return Product
+}

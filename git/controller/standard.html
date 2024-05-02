@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+</head>
+<body>
+    <h1>Welcome to Crafts n Stitch</h1>
+    <img src="https://images.pexels.com/photos/1417945/pexels-photos-1417945.jpeg" width="400px">
+
+    <button id="rzp-button1">Pay with Razorpay</button>
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        var orderId,amount,url;
+        fetch(`  https://499f-2409-40f4-2a-1976-45c5-c480-2a3f-fe32.ngrok-free.app/payment/getvar`)
+            .then(response => response.json())
+            .then(data => {
+                amount=data.amount;
+                url=data.url;
+                $(document).ready(function() {
+            var settings = {
+                "url": `${url}/payment/createorder`,
+                "method": "POST",
+                "timeout": 0,
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                "data": JSON.stringify({
+                    "amount": amount
+                }),
+            };
+
+            // Create a new orderId when the page loads
+            $.ajax(settings).done(function(response) {
+                orderId = response.orderId;
+                console.log(orderId);
+                $("button").show(); // Show the button after getting orderId
+            });
+        });
+
+        document.getElementById('rzp-button1').onclick = function(e) {
+            var options = {
+                "key": "rzp_test_cLszTFyBXcQO45", // Enter your Razorpay Key ID here
+                "amount":amount*100, // Amount in currency subunits (in this case, paise)
+                "currency": "INR",
+                "name": "Crafts n Stitch",
+                "description": "Test Transaction",
+                "image": "https://example.com/your_logo",
+                "order_id": orderId, // Pass the orderId obtained earlier
+                "handler": function(response) {
+                    // alert(response.razorpay_payment_id);
+                    // alert(response.razorpay_order_id);
+                    // alert(response.razorpay_signature);
+                    // Send the response to the server for verification
+                    $.post("/api/payment/verify", response, function(data) {
+                        alert(JSON.stringify(data));
+                    });
+                },
+                "theme": {
+                    "color": "#99cc33"
+                }
+            };
+
+            var rzp1 = new Razorpay(options);
+            rzp1.open();
+            e.preventDefault();
+        };
+            })
+            .catch(error => console.error('Error fetching environment variable:', error));
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+module.exports=(sequelize,DataTypes)=>{
+    const Cart = sequelize.define('cart',{
+        userid:{
+            type:DataTypes.INTEGER,
+            allowNull:false
+        },
+        designerid:{
+            type:DataTypes.INTEGER,
+            allowNull:true
+        },
+        imagepath:{
+            type:DataTypes.STRING,
+            allowNull:false
+        },
+        description:{
+            type:DataTypes.STRING,
+            allowNull:false
+        },
+        NumberofItems:{
+            type:DataTypes.INTEGER,
+            allowNull:false
+        },
+        productid:{
+            type:DataTypes.INTEGER,
+            allowNull:true
+        },
+        approx_price:{
+            type:DataTypes.INTEGER,
+            allowNull:true
+        }
+    })
+    return Cart
+} 
